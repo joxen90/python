@@ -27,3 +27,5 @@ print( y[0:5] )
 
 X = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
 print ( X[0:5])
+
+print("windows git")
