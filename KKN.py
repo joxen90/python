@@ -13,4 +13,4 @@ print(df.head())
 print(df['custcat'].value_counts())
 
 
-print(df.hist(column='income', bins=50))
+df.hist(column='income', bins=50)
