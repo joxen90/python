@@ -39,12 +39,23 @@ from sklearn.neighbors import KNeighborsClassifier
 
 k = 4
 #Train Model and Predict  
-neigh = KNeighborsClassifier(n_neighbors = k).fit(X_train,y_train)
-print(neigh)
+neigh4 = KNeighborsClassifier(n_neighbors = k).fit(X_train,y_train)
+print(neigh4)
 
-yhat = neigh.predict(X_test)
+yhat = neigh4.predict(X_test)
 yhat[0:5]
 
 from sklearn import metrics
-print("Train set Accuracy: ", metrics.accuracy_score(y_train, neigh.predict(X_train)))
+print("Train set Accuracy: ", metrics.accuracy_score(y_train, neigh4.predict(X_train)))
 print("Test set Accuracy: ", metrics.accuracy_score(y_test, yhat))
+
+k = 6
+#Train Model and Predict  
+neigh6 = KNeighborsClassifier(n_neighbors = k).fit(X_train,y_train)
+print(neigh6)
+yhat6 = neigh6.predict(X_test)
+yhat6[0:5]
+
+from sklearn import metrics
+print("Train set Accuracy: ", metrics.accuracy_score(y_train, neigh6.predict(X_train)))
+print("Test set Accuracy: ", metrics.accuracy_score(y_test, yhat6))
