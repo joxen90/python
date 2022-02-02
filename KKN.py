@@ -9,5 +9,5 @@ from sklearn import preprocessing
 
 df = pd.read_csv('teleCust1000t.csv')
 df.head()
-
+print(df.head())
 df['custcat'].value_counts()
