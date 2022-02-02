@@ -42,4 +42,4 @@ from sklearn.model_selection import train_test_split
 X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=3)
 
 print("X trainset", X_trainset.shape)
-print"Y trainset", y_trainset.shape)
+print("Y trainset", y_trainset.shape)
