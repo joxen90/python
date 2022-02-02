@@ -18,3 +18,14 @@ churn_df = churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equi
 churn_df['churn'] = churn_df['churn'].astype('int')
 print(churn_df.head())
 print(churn_df.shape)
+
+X = np.asarray(churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip']])
+X[0:5]
+print("X")
+print(X)
+print(X[0:5])
+
+y = np.asarray(churn_df['churn'])
+y [0:5]
+print("y")
+print(y)
