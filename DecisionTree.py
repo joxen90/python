@@ -62,7 +62,7 @@ from  io import StringIO
 import pydotplus
 import matplotlib.image as mpimg
 from sklearn import tree
-%matplotlib inline 
+#matplotlib inline 
 
 dot_data = StringIO()
 filename = "drugtree.png"
