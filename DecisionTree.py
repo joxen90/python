@@ -21,7 +21,7 @@ le_sex = preprocessing.LabelEncoder()
 le_sex.fit(['F','M'])
 X[:,1] = le_sex.transform(X[:,1]) 
 
-print(X[:,1])
+#print(X[:,1])
 
 le_BP = preprocessing.LabelEncoder()
 le_BP.fit([ 'LOW', 'NORMAL', 'HIGH'])
@@ -33,3 +33,13 @@ le_Chol.fit([ 'NORMAL', 'HIGH'])
 X[:,3] = le_Chol.transform(X[:,3]) 
 
 X[0:5]
+
+y = my_data["Drug"]
+y[0:5]
+
+from sklearn.model_selection import train_test_split
+
+X_trainset, X_testset, y_trainset, y_testset = train_test_split(X, y, test_size=0.3, random_state=3)
+
+print("X trainset", X_trainset.shape)
+print"Y trainset", y_trainset.shape)
