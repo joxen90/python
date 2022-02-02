@@ -13,6 +13,6 @@ print(df.head())
 print(df['custcat'].value_counts())
 
 
-n,bins,patches=df.hist(column='income', bins=50)
-plt.hist(n, 50, facecolor='blue', alpha=0.5)
+df.hist(column='income', bins=50)
+#plt.hist(n, 50, facecolor='blue', alpha=0.5)
 plt.show()
