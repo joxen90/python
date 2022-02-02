@@ -10,4 +10,7 @@ from sklearn import preprocessing
 df = pd.read_csv('teleCust1000t.csv')
 df.head()
 print(df.head())
-df['custcat'].value_counts()
+print(df['custcat'].value_counts())
+
+
+print(df.hist(column='income', bins=50))
