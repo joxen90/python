@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 
 churn_df = pd.read_csv("ChurnData.csv")
 churn_df.head()
-
+print("chrun haead", churn_df.head())
 churn_df = churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip',   'callcard', 'wireless','churn']]
 churn_df['churn'] = churn_df['churn'].astype('int')
-churn_df.head()
-churn_df.shape
+print(churn_df.head())
+print(churn_df.shape)
