@@ -17,3 +17,15 @@ cell_df[cell_df['Class'] == 2][0:50].plot(kind='scatter', x='Clump', y='UnifSize
 plt.show()
 
 cell_df.dtypes
+
+cell_df = cell_df[pd.to_numeric(cell_df['BareNuc'], errors='coerce').notnull()]
+cell_df['BareNuc'] = cell_df['BareNuc'].astype('int')
+cell_df.dtypes
+
+feature_df = cell_df[['Clump', 'UnifSize', 'UnifShape', 'MargAdh', 'SingEpiSize', 'BareNuc', 'BlandChrom', 'NormNucl', 'Mit']]
+X = np.asarray(feature_df)
+X[0:5]
+
+cell_df['Class'] = cell_df['Class'].astype('int')
+y = np.asarray(cell_df['Class'])
+y [0:5]
