@@ -59,9 +59,9 @@ for k, col in zip(unique_labels, colors):
 plt.show()
 
 
-from sklearn.cluster import KMeans
-k=3
-k_means3=KMeans(init = "k-means", n_clusters=k, n_init=12)
+from sklearn.cluster import KMeans 
+k = 3
+k_means3 = KMeans(init = "k-means++", n_clusters = k, n_init = 12)
 k_means3.fit(X)
 fig = plt.figure(figsize=(6, 4))
 ax = fig.add_subplot(1, 1, 1)
