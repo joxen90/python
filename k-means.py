@@ -12,7 +12,7 @@ X, y = make_blobs(n_samples=5000, centers=[[4,4], [-2, -1], [2, -3], [1, 1]], cl
 
 plt.scatter(X[:, 0], X[:, 1], marker='.')
 
-k_means = KMeans(init = "k-means++", n_clusters = 4, n_init = 12)
+k_means = KMeans(init = "k-means++", n_clusters = 3, n_init = 12)
 
 k_means.fit(X)
 
