@@ -45,3 +45,14 @@ plt.yticks([])
 plt.scatter(X1[:, 0], X1[:, 1], marker='.')
 # Display the plot
 plt.show()
+
+
+dist_matrix = distance_matrix(X1,X1) 
+print(dist_matrix)
+
+Z = hierarchy.linkage(dist_matrix, 'complete')
+
+dendro = hierarchy.dendrogram(Z)
+
+Z = hierarchy.linkage(dist_matrix, 'average')
+dendro = hierarchy.dendrogram(Z)
