@@ -45,7 +45,7 @@ movies_df.head()
 
 #Every genre is separated by a | so we simply have to call the split function on |
 movies_df['genres'] = movies_df.genres.str.split('|')
-movies_df.head()
+print(movies_df.head())
 
 #Copying the movie dataframe into a new one since we won't need to use the genre information in our first case.
 moviesWithGenres_df = movies_df.copy()
@@ -63,3 +63,5 @@ ratings_df.head()
 #Drop removes a specified row or column from a dataframe
 ratings_df = ratings_df.drop('timestamp', 1)
 ratings_df.head()
+
+print(ratings_df.head())
