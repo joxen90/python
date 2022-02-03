@@ -6,7 +6,7 @@ from scipy.spatial import distance_matrix
 from matplotlib import pyplot as plt 
 from sklearn import manifold, datasets 
 from sklearn.cluster import AgglomerativeClustering 
-from sklearn.datasets.samples_generator import make_blobs 
+from sklearn.datasets import make_blobs 
 #matplotlib inline
 X1, y1 = make_blobs(n_samples=50, centers=[[4,4], [-2, -1], [1, 1], [10,4]], cluster_std=0.9)
 
