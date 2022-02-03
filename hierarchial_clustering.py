@@ -44,4 +44,4 @@ plt.yticks([])
 # Display the plot of the original data before clustering
 plt.scatter(X1[:, 0], X1[:, 1], marker='.')
 # Display the plot
-plt.show()s
+plt.show()
