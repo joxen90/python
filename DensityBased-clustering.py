@@ -36,3 +36,22 @@ print(n_clusters_)
 # Remove repetition in labels by turning it into a set.
 unique_labels = set(labels)
 print(unique_labels)
+
+# Create colors for the clusters.
+colors = plt.cm.Spectral(np.linspace(0, 1, len(unique_labels)))
+
+# Plot the points with colors
+for k, col in zip(unique_labels, colors):
+    if k == -1:
+        # Black used for noise.
+        col = 'k'
+
+    class_member_mask = (labels == k)
+
+    # Plot the datapoints that are clustered
+    xy = X[class_member_mask & core_samples_mask]
+    plt.scatter(xy[:, 0], xy[:, 1],s=50, c=[col], marker=u'o', alpha=0.5)
+
+    # Plot the outliers
+    xy = X[class_member_mask & ~core_samples_mask]
+    plt.scatter(xy[:, 0], xy[:, 1],s=50, c=[col], marker=u'o', alpha=0.5)
