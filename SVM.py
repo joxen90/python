@@ -4,7 +4,7 @@ import numpy as np
 import scipy.optimize as opt
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-%matplotlib inline 
+#matplotlib inline 
 import matplotlib.pyplot as plt
 
 #wget -O cell_samples.csv https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/Module%203/data/cell_samples.csv
