@@ -1,6 +1,7 @@
 #wget -O Cust_Segmentation.csv https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-ML0101EN-SkillsNetwork/labs/Module%204/data/Cust_Segmentation.csv
 
 import pandas as pd
+import numpy as np
 cust_df = pd.read_csv("Cust_Segmentation.csv")
 cust_df.head()
 
