@@ -56,7 +56,7 @@ for k, col in zip(unique_labels, colors):
     xy = X[class_member_mask & ~core_samples_mask]
     plt.scatter(xy[:, 0], xy[:, 1],s=50, c=[col], marker=u'o', alpha=0.5)
 
-plt.show()
+#plt.show()
 
 
 from sklearn.cluster import KMeans 
