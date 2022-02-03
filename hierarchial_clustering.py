@@ -11,7 +11,7 @@ from sklearn.datasets import make_blobs
 X1, y1 = make_blobs(n_samples=50, centers=[[4,4], [-2, -1], [1, 1], [10,4]], cluster_std=0.9)
 
 plt.scatter(X1[:, 0], X1[:, 1], marker='o') 
-
+agglom = AgglomerativeClustering(n_clusters = 4, linkage = 'average')
 agglom.fit(X1,y1)
 
 # Create a figure of size 6 inches by 4 inches.
