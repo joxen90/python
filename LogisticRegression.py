@@ -54,7 +54,7 @@ from sklearn.metrics import jaccard_score
 jaccard_score(y_test, yhat,pos_label=0)
 
 
-rom sklearn.metrics import classification_report, confusion_matrix
+from sklearn.metrics import classification_report, confusion_matrix
 import itertools
 def plot_confusion_matrix(cm, classes,
                           normalize=False,
