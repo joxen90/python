@@ -36,7 +36,7 @@ ax = fig.add_subplot(1, 1, 1)
 # For loop that plots the data points and centroids.
 # k will range from 0-3, which will match the possible clusters that each
 # data point is in.
-for k, col in zip(range(len([[4,4], [-2, -1], [2, -3], [1, 1]])), colors):
+for k, col in zip(range(len([[4,4], [-2, -1], [2, -3], [1, -81]])), colors):
 
     # Create a list of all data points, where the data points that are 
     # in the cluster (ex. cluster 0) are labeled as true, else they are
