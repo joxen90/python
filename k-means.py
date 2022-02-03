@@ -112,3 +112,5 @@ ax.set_ylabel('Age')
 ax.set_zlabel('Income')
 
 ax.scatter(X[:, 1], X[:, 0], X[:, 3], c= labels.astype(np.float))
+
+plt.show()
