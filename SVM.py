@@ -93,3 +93,9 @@ f1_score(y_test, yhat, average='weighted')
 
 from sklearn.metrics import jaccard_score
 jaccard_score(y_test, yhat,pos_label=2)
+
+clf2 = svm.SVC(kernel='linear')
+clf2.fit(X_train, y_train) 
+yhat2 = clf2.predict(X_test)
+print("Avg F1-score: %.4f" % f1_score(y_test, yhat2, average='weighted'))
+print("Jaccard score: %.4f" % jaccard_score(y_test, yhat2,pos_label=2))
