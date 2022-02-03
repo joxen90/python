@@ -59,7 +59,7 @@ for k, col in zip(unique_labels, colors):
 plt.show()
 
 
-from sklearn.cluster import kMeans
+from sklearn.cluster import KMeans
 k=3
 k_means3=KMeans(init = "k-means", n_clusters=k, n_init=12)
 k_means3.fit(X)
