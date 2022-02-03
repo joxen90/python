@@ -101,3 +101,10 @@ plt.figure()
 plot_confusion_matrix(cnf_matrix, classes=['churn=1','churn=0'],normalize= False,  title='Confusion matrix')
 
 print (classification_report(y_test, yhat))
+
+from sklearn.metrics import log_loss
+log_loss(y_test, yhat_prob)
+
+LR2 = LogisticRegression(C=0.01, solver='sag').fit(X_train,y_train)
+yhat_prob2 = LR2.predict_proba(X_test)
+print ("LogLoss: : %.2f" % log_loss(y_test, yhat_prob2))
