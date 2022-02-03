@@ -57,3 +57,15 @@ for k, col in zip(unique_labels, colors):
     plt.scatter(xy[:, 0], xy[:, 1],s=50, c=[col], marker=u'o', alpha=0.5)
 
 plt.show()
+
+
+from sklearn.cluster import kMeans
+k=3
+k_means3=KMeans(init = "k-means", n_clusters=k, n_init=12)
+k_means3.fit(X)
+fig = plt.figure(figsize=(6, 4))
+ax = fig.add_subplot(1, 1, 1)
+for k, col in zip(range(k), colors):
+    my_members = (k_means3.labels_ == k)
+    plt.scatter(X[my_members, 0], X[my_members, 1],  c=col, marker=u'o', alpha=0.5)
+plt.show()
