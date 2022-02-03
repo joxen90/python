@@ -56,3 +56,5 @@ dendro = hierarchy.dendrogram(Z)
 
 Z = hierarchy.linkage(dist_matrix, 'average')
 dendro = hierarchy.dendrogram(Z)
+
+plt.show()
