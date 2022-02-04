@@ -9,24 +9,31 @@ from sklearn import preprocessing
 
 df = pd.read_csv('teleCust1000t.csv')
 df.head()
-print(df.head())
-print(df['custcat'].value_counts())
+print(df.head()) ## print header column and first rows
+print(df['custcat'].value_counts())  # print number of custcatr
 
 
-df.hist(column='income', bins=50)
+df.hist(column='income', bins=50) #histogram of income
+
 #plt.hist(n, 50, facecolor='blue', alpha=0.5)
-plt.show()
+#plt.show()
 
-print(df.columns)
+df.hist(column='custcat', bins=50) # histogram of custcat
+#plt.show()
+print("df shape", df.shape) # print shape
 
+print(df.columns) # print column name
+
+print("X 05")
 X = df[['region', 'tenure','age', 'marital', 'address', 'income', 'ed', 'employ','retire', 'gender', 'reside']] .values  #.astype(float)
-print( X[0:5] )
+print( X[0:10] )
+
 
 y = df['custcat'].values
 print( y[0:5] )
 
 X = preprocessing.StandardScaler().fit(X).transform(X.astype(float))
-print ( X[0:5])
+print ( X[0:10])
 
 print("windows git")
 
@@ -61,7 +68,7 @@ print("Train set Accuracy: ", metrics.accuracy_score(y_train, neigh6.predict(X_t
 print("Test set Accuracy: ", metrics.accuracy_score(y_test, yhat6))
 
 
-Ks = 10
+Ks = 20
 mean_acc = np.zeros((Ks-1))
 std_acc = np.zeros((Ks-1))
 
@@ -74,9 +81,9 @@ for n in range(1,Ks):
 
     
     std_acc[n-1]=np.std(yhat==y_test)/np.sqrt(yhat.shape[0])
-
-mean_acc
-
+print("Mean acc")
+print(mean_acc)
+plt.show()
 plt.plot(range(1,Ks),mean_acc,'g')
 plt.fill_between(range(1,Ks),mean_acc - 1 * std_acc,mean_acc + 1 * std_acc, alpha=0.10)
 plt.fill_between(range(1,Ks),mean_acc - 3 * std_acc,mean_acc + 3 * std_acc, alpha=0.10,color="green")
