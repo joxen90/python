@@ -15,17 +15,18 @@ print("tag object:",tag_object)
 
 
 tag_object=soup.h3
-tag_object
+print("tag object h3", tag_object)
 
 tag_child =tag_object.b
-tag_child
+print("TAG CHILD: ",tag_child)
+
 
 parent_tag=tag_child.parent
-parent_tag
+print("tag child parent: ",parent_tag)
 
 tag_object
-
 tag_object.parent
 
+
 sibling_1=tag_object.next_sibling
-sibling_1
+print(sibling_1)
