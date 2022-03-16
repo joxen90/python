@@ -9,3 +9,19 @@ soup =bsp4(html, "html.parser")
 print(soup.prettify())
 
 print("test")
+
+tag_object=soup.title
+print("tag object:",tag_object)
+
+tag_child =tag_object.b
+tag_child
+
+parent_tag=tag_child.parent
+parent_tag
+
+tag_object
+
+tag_object.parent
+
+sibling_1=tag_object.next_sibling
+sibling_1
