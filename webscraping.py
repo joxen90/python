@@ -14,7 +14,7 @@ tag_object=soup.title
 print("tag object:",tag_object)
 
 
-ag_object=soup.h3
+tag_object=soup.h3
 tag_object
 
 tag_child =tag_object.b
