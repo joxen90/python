@@ -6,6 +6,6 @@ html="<!DOCTYPE html><html><head><title>Page Title</title></head><body><h3><b id
 
 soup =bsp4(html, "html.parser")
 
-print(soup)
+print(soup.prettify())
 
 print("test")
